@@ -57,26 +57,60 @@ public class Data {
             "춘천시", "태백시", "평창군", "홍천군", "화천군", "횡성군"};
     String[] jeju = {"서귀포시", "제주시"};
 
+//    String[] metropolitan = {"서울특별시", "경기도", "부산광역시", "대구광역시", "인천광역시"
+//            , "광주광역시", "대전광역시", "울산광역시", "세종특별자치도", "충청북도", "충청남도"
+//            , "전라북도", "전라남도", "경상북도", "경상남도", "강원특별자치도", "제주특별자치도" };
     public List findCity(String city){
         List result = null;
         switch(city){
             case "서울특별시":
                 result.add(seoul);
+                break;
+            case "경기도":
+                result.add(gyeongi);
+                break;
+            case "강원특별자치도":
+                result.add(kangwon);
+                break;
+            case "전라남도":
+                result.add(jeonnam);
+                break;
+            case "전라북도":
+                result.add(jeonbuk);
+                break;
+            case "경상북도":
+                result.add(gyeongbuk);
+                break;
+            case "경상남도":
+                result.add(gyeongnam);
+                break;
+            case "제주특별자치도":
+                result.add(jeju);
+                break;
+            case "세종특별자치도":
+                result.add(sejong);
+                break;
+            case "부산광역시":
+                result.add(busan);
+                break;
+            case "대구광역시":
+                result.add(daegu);
+                break;
+            case "대전광역시":
+                result.add(daejeon);
+                break;
+            case "인천광역시":
+                result.add(incheon);
+                break;
+            case "광주광역시":
+                result.add(gwangju);
+                break;
+            case "울산광역시":
+                result.add(ulsan);
+                break;
 
         }
         return result;
     }
 
-    static int mp(int base, int exp){
-        int res = 1;
-        for(int i = 0; i <exp; i++){
-            res *= base;
-            System.out.println("i = " + i + " res = " + res);
-        }
-        return res;
-    }
-    public static void main(String[] args) {
-        int res = mp(2,10);
-        System.out.println(res);
-    }
 }
